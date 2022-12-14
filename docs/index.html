@@ -72,7 +72,16 @@
 <div class="page-header"><h1 id="geobridge">GEObridge<a class="anchor" aria-label="anchor" href="#geobridge"></a>
 </h1></div>
 <div class="section level2">
-<h2 id="install-from-github-for-most-updated-package-">Install from github for most updated package.<a class="anchor" aria-label="anchor" href="#install-from-github-for-most-updated-package-"></a>
+<h2 id="install-dependencies-package">Install dependencies package<a class="anchor" aria-label="anchor" href="#install-dependencies-package"></a>
+</h2>
+<pre><code><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"GEOmetadb"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"GEOquery"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="then-install-our-package-from-github-">Then, install our package from github.<a class="anchor" aria-label="anchor" href="#then-install-our-package-from-github-"></a>
 </h2>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"yuefang1991/GEObridge"</span><span class="op">)</span></span></code></pre>
@@ -92,7 +101,7 @@
 </h2>
 <p>If you have any questions or problems, please feel free to open a new issue <a href="https://github.com/yuefang1991/GEObridge/issues" class="external-link">here</a>. We will fix the new issue ASAP. You can also email the maintainers and authors below.</p>
 <ul><li>Yue Fang (<a href="mailto:fangyue@iu.edu" class="email">fangyue@iu.edu</a>)</li></ul>
-<p>Biostatistics master student at <a href="https://zcslab.github.io/" class="external-link">Biomedical Data Research Lab (BDRL)</a> , Indiana University School of Medicine</p>
+<p>Biostatistics master student at <a href="https://zcslab.github.io/" class="external-link">Biomedical Data Research Lab (BDRL)</a>, Indiana University School of Medicine</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
