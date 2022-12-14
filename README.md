@@ -1,6 +1,16 @@
 # GEObridge
 
-## Install from github for most updated package. 
+## Install dependencies package
+
+```
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("GEOmetadb")
+BiocManager::install("GEOquery")
+```
+
+## Then, install our package from github. 
 
 ```
 library("devtools")
