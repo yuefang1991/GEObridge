@@ -24,4 +24,4 @@ If you have any questions or problems, please feel free to open a new issue [her
 - Yue Fang
 (fangyue@iu.edu)
 
-Biostatistics master student  at [Biomedical Data Research Lab (BDRL)](https://zcslab.github.io/) , Indiana University School of Medicine
+Biostatistics master student  at [Biomedical Data Research Lab (BDRL)](https://zcslab.github.io/), Indiana University School of Medicine
