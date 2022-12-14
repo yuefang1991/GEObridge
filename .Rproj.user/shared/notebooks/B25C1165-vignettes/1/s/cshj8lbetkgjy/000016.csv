@@ -1,9 +1,0 @@
-"0","# Due to the static document cannot show the interactive Shiny Gadget, we will demostrate this function in the video."
-"0","# However, you can run below code in your RStudio to play with it."
-"0",""
-"0","barplot_interact(top10)"
-"2","
-Listening on http://127.0.0.1:3687
-"
-"2","
-"
