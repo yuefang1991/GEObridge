@@ -1,0 +1,9 @@
+exportPattern("^[[:alpha:]]+")
+import(ggplot2)
+importFrom("utils", "download.file")
+import(GEOmetadb)
+import(DBI)
+import(GEOquery)
+import(RSQLite)
+import(shiny) # import this package could solve error: no visible global function definition for
+import(shinyWidgets)

@@ -1,0 +1,17 @@
+Package: GEObridge
+Type: Package
+Title: GEObridge, An R package to utilize the GEO database
+Version: 0.1.0
+Authors@R: person("Yue", "Fang", email = "fangyue@iu.edu", role = c("aut", "cph","cre"))
+Author: 
+  Yue Fang [aut, cph, cre]
+Maintainer: Yue Fang <fangyue_1991@126.com>
+Description: A novel R package which makes searching data
+          in the GEO database not difficult anymore for everyone.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+Imports: DBI, GEOmetadb, ggplot2, GEOquery, RSQLite, shiny, shinyWidgets
+RoxygenNote: 7.1.2
+URL: https://yuefang.github.io/GEObridge/
+BugReports: https://github.com/yuefang/GEObridge/issues

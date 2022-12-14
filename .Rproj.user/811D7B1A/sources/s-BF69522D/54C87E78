@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1670392405719.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "54C87E78",
+    "lastKnownWriteTime" : 1670753440,
+    "last_content_update" : 1670753440401,
+    "path" : "~/Documents/work/yue_proposal_work/GEObridge/R/GEObridge.R",
+    "project_path" : "R/GEObridge.R",
+    "properties" : {
+        "cursorPosition" : "144,0",
+        "scrollLine" : "137",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

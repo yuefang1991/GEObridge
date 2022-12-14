@@ -1,0 +1,5 @@
+
+connection = prepare_table()
+data_res = keyword_search()
+top10 = print_top_N_platform(db = connection)
+barplot_top_N_platform(top10)

@@ -1,0 +1,96 @@
+setwd("C:/Users/wnchang/Documents/F/PhD_Research/2018_10_18_Edward")
+setwd("C:/Users/wnchang//Downloads")
+
+# BiocManager::install("GEOmetadb")
+
+# install package 
+# 1. cran default 
+# 2. github
+# 3. other 
+
+library(tools)
+library(GEOmetadb)
+
+if( !file.exists("GEOmetadb.sqlite") ) {
+  demo_sqlfile <- getSQLiteFile(destdir = getwd(), destfile = "GEOmetadb.sqlite.gz")
+} else {
+  demo_sqlfile <- "GEOmetadb.sqlite"
+}
+
+con = dbConnect(SQLite(), "GEOmetadb.sqlite")
+
+library(plyr)
+library(dplyr)
+con
+geo_tables = dbListTables(con)
+print(geo_tables)
+dbListFields(con,'gse')
+dbListFields(con,'gse_gpl')
+dbListFields(con,'gds')
+dbListFields(con,'gse_gsm')
+dbListFields(con,'gsm')
+dbListFields(con,'geoConvert')
+dbListFields(con,'sMatrix')
+
+
+gse_database0 = dbGetQuery(con, 'select * from gse limit 80000')
+gse_database = gse_database0[,c('title', 'gse', 'summary', 'type', 'overall_design')]	
+sort(table(gse_database$type),decreasing=T)[1:10]
+
+
+#counts = apply(gse_database, MARGIN=1, function(x)(grep("expression profiling by high throughput sequencing",tolower(x))))
+counts = apply(gse_database, MARGIN=1, function(x)(grep("Expression profiling by high throughput sequencing", x)))
+gse_database_RNAseq = gse_database[which(sapply(counts, length)>0),]
+gse_database_RNAseq_unique =  gse_database_RNAseq[which(gse_database_RNAseq[,9]=="Expression profiling by high throughput sequencing"),]
+dim(gse_database_RNAseq_unique)
+
+####ovarian	
+counts = apply(gse_database_RNAseq_unique , MARGIN=1, function(x)(grep("breast",tolower(x))))
+breast = gse_database_RNAseq_unique[which(sapply(counts, length)>0),]
+length(breast$gse)
+#this is GSE search from keyword "ovrian"
+
+####tumor	
+counts = apply(gse_database_RNAseq_unique , MARGIN=1, function(x)(grep("tumor",tolower(x))))
+length(which(sapply(counts, length)>0))
+tumor = gse_database_RNAseq_unique[which(sapply(counts, length)>0),]
+length(tumor$gse)
+#this is GSE search from keyword "tumor"
+
+#print intersect of "ovarian"&"tumor"
+#intersect(ovarian$gse,tumor$gse)
+
+###cancer
+counts = apply(gse_database_RNAseq_unique , MARGIN=1, function(x)(grep("cancer",tolower(x))))
+length(which(sapply(counts, length)>0))
+cancer = gse_database_RNAseq_unique[which(sapply(counts, length)>0),]
+length(cancer$gse)
+#this is GSE search from keyword "cancer"
+
+
+###clear
+counts = apply(gse_database_RNAseq_unique , MARGIN=1, function(x)(grep("clear",tolower(x))))
+length(which(sapply(counts, length)>0))
+clear = gse_database_RNAseq_unique[which(sapply(counts, length)>0),]
+length(clear$gse)
+#this is GSE search from keyword "clear"
+
+
+aa = Reduce(intersect, list(ovarian$gse,cancer$gse,clear$gse))
+bb = Reduce(intersect, list(ovarian$gse,tumor$gse,clear$gse))
+
+unique(union(aa,bb))
+
+
+##########test
+#ss = as.data.frame(matrix(1:12,3,4))
+#ss[1,1] = "this"
+#ss[1,2] = "is"
+#s[1,3] = "wennan"
+#apply(ss, MARGIN=1, function(x)(grep("wennan",tolower(x))))
+############
+
+# use below code to filer 'Human' tissue
+counts = apply(gse_database, MARGIN=1, function(x)(grep("Homo sapiens", x))) # key word : Homo sapiens
+length(which(sapply(counts, length)>0))
+gse_database[which(sapply(counts, length)>0),'gse'] # Then, intersect the result with your gse set.
