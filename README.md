@@ -9,7 +9,7 @@ devtools::install_github("yuefang1991/GEObridge")
 
 ## Vignette
 
-A comprehensive and complete tutorial is [here](https://yuefang1991.github.io/GEObridge/articles/vignettes.html). Or, you can click the **Article** menu button at the top of the official website (https://github.com/yuefang1991/GEObridge) to access the tutorial.
+A comprehensive and complete tutorial is [here](https://yuefang1991.github.io/GEObridge/articles/vignettes.html). Or, you can click the **Article** menu button at the top of the official website (https://yuefang1991.github.io/GEObridge/) to access the tutorial.
 
 
 ## News
