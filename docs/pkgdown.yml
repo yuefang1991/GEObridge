@@ -3,5 +3,8 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   vignettes: vignettes.html
-last_built: 2022-12-14T05:56Z
+last_built: 2022-12-14T06:56Z
+urls:
+  reference: https://yuefang1991.github.io/GEObridge/reference
+  article: https://yuefang1991.github.io/GEObridge/articles
 
