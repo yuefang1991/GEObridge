@@ -120,7 +120,7 @@ print_top_N_platform <- function(limitN=2000, topN=10, verbose=TRUE, db=con, sub
   if(verbose==T) dim(gse_database)
 
   length(sort(table(gse_database$type),decreasing=T))
-  top10platform = sort(table(gse_database$type),decreasing=T)[1:10]
+  top10platform = sort(table(gse_database$type),decreasing=T)[1:topN]
   print(top10platform)
 
   return(top10platform)
