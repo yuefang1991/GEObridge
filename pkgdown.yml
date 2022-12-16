@@ -1,9 +1,9 @@
 pandoc: 2.19.2
-pkgdown: 2.0.6
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   vignettes: vignettes.html
-last_built: 2022-12-15T05:23Z
+last_built: 2022-12-16T05:39Z
 urls:
   reference: https://yuefang1991.github.io/GEObridge/reference
   article: https://yuefang1991.github.io/GEObridge/articles
