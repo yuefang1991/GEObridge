@@ -87,6 +87,7 @@ To enable the searching function in GEObridge, we need to save the GSE table int
 
 ```{r demo1, include=TRUE, eval=TRUE}
 search_res = keyword_search(key1='breast', key2='cancer', limitN=2000, verbose=TRUE, db=connection, subTable='gse')
+print(search_res)
 ```
 
 
